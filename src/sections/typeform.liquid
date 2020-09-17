@@ -1,0 +1,62 @@
+
+<div class="container">
+	{% for block_conatainer in section.blocks limit:3%}
+    <h1 class="typeform-title">{{ block_conatainer.settings.typeforme_title }}</h1>
+	
+		<div class="typeform-container">
+          	{% for block_title in section.blocks %}
+          	{% if block_title.type == "text-2" %}
+            <a class="{{ block_title.settings.typeforme_link }}">{{ block_title.settings.typeforme_linkname }}</a>
+          	{% endif %}
+          	{% endfor %}
+        </div>
+
+	{% endfor %}
+
+</div>
+{% schema %}
+  {
+	"blocks" : [
+	
+	{
+		"name": "typeforme_title",
+		"type": "text-1",
+		"settings": [{
+
+			"id": "typeforme_title",
+            "type": "text",
+            "label": "Titre typeform"
+		}
+	  ]
+	},
+	{	
+		"name": "typeforme_link",
+		"type": "text-2",
+		"settings": [
+		{
+			"id": "typeforme_link",
+            "type": "text",
+            "label": "Liens typeform"
+		},
+		{
+			"id": "typeforme_linkname",
+            "type": "text",
+            "label": "nom typeform"
+		}
+
+	  ]
+
+	}
+	
+		
+  ]
+
+	
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

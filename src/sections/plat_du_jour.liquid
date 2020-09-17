@@ -1,0 +1,117 @@
+<div class="background-home">
+    <!--
+    <video preload="auto" autoplay muted class="vidéo-présentation" loop width="100%" poster="{% comment %}{{ 'leplateau-repas-tiptoque.JPG' | asset_img_url }}{% endcomment %}" >
+        <source src="{% comment %}{{ 'tiptoque-by-plume.webm' | asset_url }}{% endcomment %}" type="video/webm">
+        <source src="{% comment %}{{ 'tiptoque-by-plume.mp4' | asset_url }}{% endcomment %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    -->
+
+    <div class="image-content" >
+        <img src="{{ section.settings.bkgd-image | img_url : '' }}">
+    </div>
+
+    <div class="header-content">
+        <header>
+            <div class="header-presentation">
+                <h2 class="home-title" {% if section.settings.home-title == blank %} style=" margin: 0; padding: 0" {% endif %} >{{ section.settings.home-title}}</h2>
+                <h3 class="home-subtitle" {% if section.settings.home-subtitle == blank %} style=" margin: 0; padding: 0" {% endif %}>{{section.settings.home-subtitle}}</h3>
+                <h3 class="home-subtitle2" {% if section.settings.home-subtitle2 == blank %} style=" margin: 0; padding: 0" {% endif %} >{{section.settings.home-subtitle2}}</h3>
+                <div class="home-buttons">
+                    <a class="button_left" {% if section.settings.button_hopitaux == blank %} style=" margin: 0; padding: 0" {% endif %} target="_blank" href="{{ section.settings.url_hopitaux }}">{{ section.settings.button_hopitaux }} {% unless section.settings.link_icon1 == blank %}  <img src="{{ section.settings.link_icon1 | img_url : 'x30' }}" class="link_icon"> {% endunless %} </a>
+                    <a class="button_right" {% if section.settings.button_chef == blank %} style=" margin: 0; padding: 0" {% endif %} target="_blank" href="{{ section.settings.url_chef }}">{{ section.settings.button_chef }} {% unless section.settings.link_icon2 == blank %}  <img src="{{ section.settings.link_icon2 | img_url : 'x30' }}" class="link_icon"> {% endunless %} </a>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
+<div class="center__button container">
+  {% comment %}<a class="button_center" target="blank" href="{{ section.settings.url_chef }}">{{ section.settings.button_center1 }}{% unless section.settings.link_icon1 == blank %}<img src="{{ section.settings.link_icon1 | img_url : 'x30' }}" class="link_icon">{% endunless %}</a>{% endcomment %}
+  {% comment %}<a class="button_center" target="blank" href="{{ section.settings.url_producteurs }}">{{ section.settings.button_center2 }}<img src="{{ section.settings.link_icon2 | img_url : 'x30' }}" class="link_icon">{% endunless %}</a>{% endcomment %}
+  <a class="button_left hidden-content" {% if section.settings.button_hopitaux == blank %} style=" margin: 0; padding: 0" {% endif %} target="_blank" href="{{ section.settings.url_hopitaux }}">{{ section.settings.button_hopitaux }} {% unless section.settings.link_icon1 == blank %}  <img src="{{ section.settings.link_icon1 | img_url : 'x30' }}" class="link_icon"> {% endunless %} </a>
+  <a class="button_right hidden-content" {% if section.settings.button_chef == blank %} style=" margin: 0; padding: 0" {% endif %} target="_blank" href="{{ section.settings.url_chef }}">{{ section.settings.button_chef }} {% unless section.settings.link_icon2 == blank %}  <img src="{{ section.settings.link_icon2 | img_url : 'x30' }}" class="link_icon"> {% endunless %} </a>
+  <a class="button_center" {% if section.settings.button_producteurs == blank %} style=" margin: 0; padding: 0" {% endif %} target="_blank" href="{{ section.settings.url_producteurs }}">{{ section.settings.button_producteurs }}{% unless section.settings.link_icon3 == blank %}<img src="{{ section.settings.link_icon3 | img_url : 'x30' }}" class="link_icon">{% endunless %}</a>
+</div>
+
+
+
+
+
+{% schema %}
+{
+  "name": "homepage-2020",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bkgd-image",
+      "label": "fond de présentation"
+    },
+    {
+        "type": "text",
+        "id": "home-title",
+        "label": "titre présentation"
+    },
+    {
+        "type": "text",
+        "id": "home-subtitle",
+        "label": "sous-titre présentation"
+    },
+    {
+        "type": "text",
+        "id": "home-subtitle2",
+        "label": "sous-titre présentation 2"
+    },
+	{
+		"type": "text",
+		"id": "button_chef",
+		"label": "bouton chef"
+	},
+	{
+        "type": "url",
+        "id": "url_chef",
+        "label": "lien typeform chef"
+    },
+    {
+		"type": "text",
+		"id": "button_producteurs",
+		"label": "bouton producteurs"
+	},
+	{
+        "type": "url",
+        "id": "url_producteurs",
+        "label": "lien typeform producteurs"
+    },
+	{
+		"type": "text",
+		"id": "button_hopitaux",
+		"label": "bouton hopitaux"
+	},
+	{
+        "type": "url",
+        "id": "url_hopitaux",
+        "label": "lien typeform hôpitaux"
+    },
+	{
+		"type": "image_picker",
+		"id": "link_icon1",
+		"label": "icon chef"
+	},
+	{
+		"type": "image_picker",
+		"id": "link_icon2",
+		"label": "icon hopitaux"
+	},
+	{
+		"type": "image_picker",
+		"id": "link_icon3",
+		"label": "icon producteurs"
+	},
+    {
+        "type": "text",
+        "id": "paragraphe",
+        "label": "phrase de gauche"
+    }
+
+  ]
+}
+{% endschema %}

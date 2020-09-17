@@ -1,0 +1,386 @@
+// css carlitooooo
+
+
+.background-home{
+    position: relative;
+    //height: calc(815px - 54.23px);
+    //height: 100vh;
+    height: auto;
+
+    .image-content{
+        display: flex;
+        justify-content: center;
+        //height: calc(815px - 54.23px);
+        width: auto;
+        img{
+            width: 60%;
+
+    }
+    }
+
+
+}
+
+.header-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    header{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        .header-presentation{
+            height: 50%;
+            width: 80%;
+            //margin-top: 150px;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            flex-direction: column;
+        }
+    }
+}
+
+hr {
+    margin: 40px 20%;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+header .home-subtitle,header .home-subtitle2, header .home-title{
+    color: white;
+}
+header .home-title{
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+header .home-subtitle{
+    font-family: 'Avenir-Book';
+    font-size: 18px;
+    text-transform: none;
+    text-align: center;
+    //margin-left: 28px;
+    margin-bottom: 10px;
+}
+header .home-subtitle2{
+    font-family: 'Avenir-Book';
+    font-size: 18px;
+    text-transform: none;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.home-buttons{
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.button_left{
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: #f08707;
+    margin-right: 15px;
+    font-size: 15px;
+}
+
+.center__button{
+
+  display: flex;
+  justify-content: center;
+
+    .button_center{
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: white;
+        background-color: #f08707;
+        margin-right: 15px;
+        font-size: 15px;
+    }
+
+}
+
+
+.button_right{
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: #f08707;
+    //margin-left: 15px;
+    font-size: 15px;
+}
+
+.big-size-video{
+    padding : 50px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-section{
+    padding-left: 15px;
+    .bolded{
+        text-align: center;
+    }
+}
+
+.flickity-button{
+    display: none;
+}
+
+.slide-section:hover{
+    .flickity-button{
+        display: block;
+        background: transparent;
+    }
+}
+
+.card{
+    width : 25%;
+    margin: 0 5px;
+}
+
+.typeform-title{
+  	font-family: 'AvenirLTPro';
+    color: #f08707;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.container{
+  	margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.link_icon{
+    margin-left: 10px;
+}
+
+.center__button .button_center:last-child{
+	margin-right: 0;
+}
+
+.button_center{
+	width: 290px;
+  	text-align: center;
+}
+
+.feed_insta{
+    margin: 50px 20%;
+}
+
+.home-section{
+    margin-top: 20px;
+}
+
+.section-title{
+
+    margin: 20px 20%;
+    font-size: 1em;
+    font-family: 'AvenirLTPro';
+    color: #515252;
+}
+
+.covet-pics-wrap{
+    margin: 30px 20%;
+}
+
+.hidden-content{
+    display: none;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .footer-container {
+    font-size: 14px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    color: #515252;
+}
+
+.menu-container p:last-child {
+     margin-bottom: 10px;
+}
+
+footer .footer-container .flex-item {
+    z-index: 99;
+    text-align: center;
+}
+
+footer .footer-container h4 {
+    margin-bottom: 34px;
+    font-family: 'AvenirLTPro';
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #515252;
+}
+
+.social-container{
+    margin-top: 40px;
+    margin-left: 0;
+}
+
+.menu-container {
+
+a.presse{
+    margin: 0 0 10px;
+    color: #333232;
+    display: block;
+    z-index: 99;
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+    border-bottom: 0;
+    }
+}
+
+a.presse:link{
+    color: none;
+}
+
+a.presse:visited{
+    color: none;
+}
+
+a.presse:hover{
+    color: none;
+}
+
+a.presse:active{
+    color: none;
+}
+
+@media screen and (max-width: 1293px) {
+    header .home-title{
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        width: 55%;
+    }
+}
+@media screen and (max-width: 1024px) {
+.header-content{
+    header{
+    .header-presentation{
+        //margin-top: 100px;
+        text-align: center;
+    }
+  }
+}
+    header .home-title{
+        font-size: 20px;
+        width: auto;
+    }
+
+    header .home-subtitle{
+        font-size: 13px;
+    }
+
+    .button_left, .button_right{
+        font-size: 10px;
+    }
+
+    .center__button{
+        .button_center{
+            font-size: 10px;
+            width: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px){
+
+        .hidden-content{
+            display: block;
+        }
+
+        .center__button{
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .center__button .button_center:last-child{
+            margin-top: 10px;
+        }
+
+        .container{
+            margin-top: 10px;
+
+        }
+
+        header .home-title{
+            font-size: 14px;
+        }
+
+        header .home-subtitle{
+            font-size: 11px;
+        }
+
+        .home-buttons{
+            display: none;
+            //flex-direction: column;
+            //justify-content: center;
+            //align-items: center;
+            //margin-top: 80px;
+        }
+
+        .button_left, .button_right{
+            font-size: 10px;
+            width: 150px;
+            margin-right: 0;
+            margin-top: 10px;
+            padding: 5px 10px;
+        }
+
+        .center__button{
+            .button_center{
+                font-size: 10px;
+                width: 150px;
+                padding: 5px 10px;
+            }
+        }
+
+
+}
+
+@media screen and (max-width: 700px){
+        .home-buttons{
+            margin-top: 150px;
+        }
+}
+
+@media screen and (max-width: 480px){
+        .home-buttons{
+        margin-top: 80px;
+    }
+
+    .background-home{
+        position: relative;
+        //height: calc(815px - 54.23px);
+
+        .image-content{
+            //height: calc(815px - 54.23px);
+            display: flex;
+            justify-content: center;
+            img{
+                width: 80%;
+            }
+        }
+
+
+    }
+}
